@@ -8,10 +8,10 @@
 <body>
     <nav class="navbar">
         <ul>
-            <li><a href='{{ url_for("home") }}'>Home</a></li>
-            <li><a href='{{ url_for("about") }}'>About</a></li>
-            <li><a href='{{ url_for("projects") }}'>Projects</a></li>
-            <li><a href='{{ url_for("contact") }}'>Contact</a></li>
+            <li><a href='{{ url_for("main_bp.home") }}'>Home</a></li>
+            <li><a href='{{ url_for("main_bp.about") }}'>About</a></li>
+            <li><a href='{{ url_for("main_bp.projects") }}'>Projects</a></li>
+            <li><a href='{{ url_for("main_bp.contact") }}'>Contact</a></li>
         </ul>
     </nav> 
     <header>
@@ -20,7 +20,8 @@
     <main>
         <p>This is my first attempt at a personal website.</p>
         <h2>Quote of the Day</h2>
-        <p>sdhosh</p>
+        <p>{{ daily_quote['quote'] }}</p>
+        <p>- {{ daily_quote['author'] }}</p>
     </main>
 </body>  
 </html>
